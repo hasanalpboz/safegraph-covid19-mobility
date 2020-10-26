@@ -1,0 +1,18 @@
+---
+name: "SafeGraph Mobility Analysis"
+pwd: "."                                     # dataset path
+storage: "data"                              # folder that stores the dataset
+proj-config:                                 # folder names and subdirs
+  weekly-v1: "weekly-patterns-v1"            # weekly mobility until 2020-06-15  
+  weekly-v2: "weekly-patterns-v2"            # weekly mobility after 2020-06-15
+  monthly-v1: "monthly-patterns-v1"          # monthly mobility until April 2020
+  monthly-v2: "monthly-patterns-v2"          # monthly mobility after May 2020
+  core-places: "core-places"                 # POI data
+  open-census: "open-census"                 # open census data
+aws-commands:                                # commands to download data
+  monthly-v1: "aws s3 sync s3://sg-c19-response/monthly-patterns/patterns_backfill/2020/05/07/12/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
+  monthly-v2: "aws s3 sync s3://sg-c19-response/monthly-patterns/patterns/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
+  weekly-v1: "aws s3 sync s3://sg-c19-response/weekly-patterns/v2/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
+  weekly-v2: "aws s3 sync s3://sg-c19-response/weekly-patterns-delivery/weekly/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
+  core-places: "aws s3 sync s3://sg-c19-response/core/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
+  open-census: "aws s3 sync s3://sg-c19-response/open-census-data/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"

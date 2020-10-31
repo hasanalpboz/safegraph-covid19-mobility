@@ -18,30 +18,56 @@ def execute_command(command):
     else:
         args = shelx.split(command)
 
-    process = subprocess.popen(args, stdout=subprocess.PIPE)
-    while True:
-        output = process.stdout.readline()
+    #process = subprocess.Popen(args, stdout=subprocess.PIPE)
+    process = subprocess.Popen(args)
+    try:
+        process.wait()
+    except KeyboardInterrupt:
+        print("nane")
         try:
-            output = output.decode("utf-8")
-        except:
-            pass
+            process.kill()
+        except OSError:
+            pass    
+    # try:
+    #     while True:
+    #         output = process.stdout.readline()
+    #         try:
+    #             output = output.decode("utf-8")
+    #         except:
+    #             pass
 
-        if output == '' and process.poll() is not None:
-            break
-        if output:
-            print(output.strip())
-    rc = process.poll()
-    return rc
+    #         if output == '' and process.poll() is not None:
+    #             break
+    #         if output:
+    #             print(output.strip())
+
+    #     rc = process.poll()
+    #     return rc
+
+    # except KeyboardInterrupt:
+    #     try:
+    #         process.terminate()
+    #     except:
+    #         pass
+    #     process.wait()
+
+    
 
 # read the config file
 with open("config.yml") as f:
     config = yaml.safe_load(f)
 
+# check if `data` folder exists
+dpath = join(config["pwd"], config["storage"])
+if not isdir(dpath):
+    os.mkdir(dpath)
+    print(dpath, "created")
+
 # create the project folders
 # if they are not already there
 for folder in config["proj-config"]:
     # current folder path
-    path = join(config["pwd"], config["storage"], folder)
+    path = join(dpath, folder)
 
     if not isdir(path):
        os.mkdir(path)

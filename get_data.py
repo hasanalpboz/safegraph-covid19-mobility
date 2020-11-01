@@ -8,6 +8,7 @@ import yaml
 import subprocess
 import shlex
 import sys
+import signal
 
 def execute_command(command):
     """
@@ -18,12 +19,17 @@ def execute_command(command):
     else:
         args = shlex.split(command)
 
+    # create the subprocess
     process = subprocess.Popen(args)
+
     try:
+        # wait till it's finished
         process.wait()
     except KeyboardInterrupt:
         try:
-            process.kill()
+            # kill the process on keyboard interrupt
+            process.send_signal(signal.SIGINT)
+            #process.kill()
         except OSError:
             pass    
 
@@ -51,4 +57,4 @@ for folder in config["proj-config"]:
         print("Updating Datasets")
 
     # execute the aws comamnd
-    execute_command(config["aws-commands"][folder].format(abspath(path))) 
+    execute_command(config["aws-commands"][folder].format(abspath(path)))

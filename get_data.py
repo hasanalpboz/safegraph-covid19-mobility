@@ -16,42 +16,16 @@ def execute_command(command):
     if sys.platform == "win32":
         args = command
     else:
-        args = shelx.split(command)
+        args = shlex.split(command)
 
-    #process = subprocess.Popen(args, stdout=subprocess.PIPE)
     process = subprocess.Popen(args)
     try:
         process.wait()
     except KeyboardInterrupt:
-        print("nane")
         try:
             process.kill()
         except OSError:
             pass    
-    # try:
-    #     while True:
-    #         output = process.stdout.readline()
-    #         try:
-    #             output = output.decode("utf-8")
-    #         except:
-    #             pass
-
-    #         if output == '' and process.poll() is not None:
-    #             break
-    #         if output:
-    #             print(output.strip())
-
-    #     rc = process.poll()
-    #     return rc
-
-    # except KeyboardInterrupt:
-    #     try:
-    #         process.terminate()
-    #     except:
-    #         pass
-    #     process.wait()
-
-    
 
 # read the config file
 with open("config.yml") as f:
@@ -78,4 +52,3 @@ for folder in config["proj-config"]:
 
     # execute the aws comamnd
     execute_command(config["aws-commands"][folder].format(abspath(path))) 
-

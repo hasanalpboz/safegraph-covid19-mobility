@@ -28,8 +28,7 @@ def execute_command(command):
     except KeyboardInterrupt:
         try:
             # kill the process on keyboard interrupt
-            process.send_signal(signal.SIGINT)
-            #process.kill()
+            process.kill()
         except OSError:
             pass    
 

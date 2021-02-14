@@ -9,6 +9,8 @@ proj-config:                                 # folder names and subdirs
   monthly-v2: "monthly-patterns-v2"          # monthly mobility after May 2020
   core-places: "core-places"                 # POI data
   open-census: "open-census"                 # open census data
+  neg-patterns: "neg-patterns"               # neighborhood patterns
+  soc-dist-metrics: "soc-dist-metrics"       # social distancing metrics
 aws-commands:                                # commands to download data
   monthly-v1: "aws s3 sync s3://sg-c19-response/monthly-patterns/patterns_backfill/2020/05/07/12/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
   monthly-v2: "aws s3 sync s3://sg-c19-response/monthly-patterns/patterns/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
@@ -16,3 +18,5 @@ aws-commands:                                # commands to download data
   weekly-v2: "aws s3 sync s3://sg-c19-response/weekly-patterns-delivery/weekly/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
   core-places: "aws s3 sync s3://sg-c19-response/core/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
   open-census: "aws s3 sync s3://sg-c19-response/open-census-data/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
+  neg-patterns: "aws s3 sync s3://sg-c19-response/neighborhood-patterns/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
+  soc-dist-metrics: "aws s3 sync s3://sg-c19-response/social-distancing/v2/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"

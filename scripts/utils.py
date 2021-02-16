@@ -61,7 +61,7 @@ def filter_patterns(pattern_file, cbgs, save_dir='.'):
 	'''
 	reads the pattern file, filters them wrt CBGs and saves them to save_dir 
 	'''
-	col_names = ['poi_cbg', 'visitor_daytime_cbgs']
+	col_names = ['poi_cbg', 'visitor_home_cbgs']
 	dfs = pd.read_csv(pattern_file, 
 		compression='gzip', 
 		chunksize=10**6,
@@ -79,12 +79,49 @@ def filter_patterns(pattern_file, cbgs, save_dir='.'):
 			index=False, 
 			header=header)
 
+def generate_links(visit, links):
+	'''
+	creates a dict of origin - target dict extracted from each row
+	'''
+	poi_cbg = str(int(visit["poi_cbg"]))
+	visitor_cbgs = json.loads(visit["visitor_home_cbgs"])
+	for cbg in visitor_cbgs.keys():
+		str_cbg = str(cbg)
+		if poi_cbg in links:
+			if str_cbg in links[poi_cbg]:
+				links[poi_cbg][str_cbg] += visitor_cbgs[cbg]
+			else:
+				links[poi_cbg][str_cbg] = visitor_cbgs[cbg]
+		else:
+			links[poi_cbg] = {}
+			links[poi_cbg][str_cbg] = visitor_cbgs[cbg]
+
 
 def create_network(pattern_file, save_dir='.'):
 	'''
 	creates a directed CBG-CBG network and saves it to save_dir
 	'''
-	
+	df = pd.read_csv(pattern_file)
+	links = {}
+	df.apply(generate_links, axis=1, links=links)
+
+	g = ig.Graph(directed=True)
+
+	nodes = set()
+	edges = []
+	weights = []
+	for cbg in links:
+		for neg_cbg in links[cbg]:
+			nodes.add(neg_cbg)
+			edges.append((neg_cbg, cbg))
+			weights.append(links[cbg][neg_cbg])
+		nodes.add(cbg)
+
+	g.add_vertices(list(nodes))
+	g.add_edges(edges)
+	g.es['weight'] = weights
+
+	g.write_pickle(join(save_dir, pattern_file.split('\\')[-1].split('.')[0]))
 
 
 if __name__ == '__main__':

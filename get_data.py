@@ -1,7 +1,3 @@
-"""
-author: Hasan Alp Boz
-date: 26/10/2020
-"""
 import os
 from os.path import join, isdir, isfile, abspath
 import yaml

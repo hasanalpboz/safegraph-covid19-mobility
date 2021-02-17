@@ -1,0 +1,29 @@
+                                     OLS Regression Results                                     
+================================================================================================
+Dep. Variable:     Betweenness_relative_change   R-squared (uncentered):                     nan
+Model:                                     OLS   Adj. R-squared (uncentered):                nan
+Method:                          Least Squares   F-statistic:                                nan
+Date:                         Wed, 17 Feb 2021   Prob (F-statistic):                         nan
+Time:                                 06:08:59   Log-Likelihood:                             nan
+No. Observations:                         5535   AIC:                                        nan
+Df Residuals:                             5530   BIC:                                        nan
+Df Model:                                    5                                                  
+Covariance Type:                     nonrobust                                                  
+================================================================================
+                   coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------
+Income              nan        nan        nan        nan         nan         nan
+White Per           nan        nan        nan        nan         nan         nan
+Asian Per           nan        nan        nan        nan         nan         nan
+Black Per           nan        nan        nan        nan         nan         nan
+Hispanic Per        nan        nan        nan        nan         nan         nan
+==============================================================================
+Omnibus:                          nan   Durbin-Watson:                     nan
+Prob(Omnibus):                    nan   Jarque-Bera (JB):                  nan
+Skew:                             nan   Prob(JB):                          nan
+Kurtosis:                         nan   Cond. No.                         5.54
+==============================================================================
+
+Notes:
+[1] R² is computed without centering (uncentered) since the model does not contain a constant.
+[2] Standard Errors assume that the covariance matrix of the errors is correctly specified.

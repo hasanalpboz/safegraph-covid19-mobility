@@ -44,7 +44,7 @@ def get_pattern_date_range(pattern_file):
 	return df.iloc[0, :].loc['date_range_start'].split('T')[0]
 
 
-def get_CBGS(cbg_file):
+def get_CBGS(cbg_file, dtype=str):
 	'''
 	returns the CBGs that belong to the analysed area
 	'''
@@ -52,7 +52,7 @@ def get_CBGS(cbg_file):
 	with open(cbg_file) as f:
 		d = json.load(f)
 		for instance in d['features']:
-			cbgs.append(instance['properties']['GEOID'])
+			cbgs.append(dtype(instance['properties']['GEOID']))
 
 	return cbgs
 
@@ -109,17 +109,18 @@ def create_network(pattern_file, save_dir='.'):
 
 	nodes = set()
 	edges = []
-	weights = []
+	visits = []
 	for cbg in links:
 		for neg_cbg in links[cbg]:
-			nodes.add(neg_cbg)
-			edges.append((neg_cbg, cbg))
-			weights.append(links[cbg][neg_cbg])
+			if neg_cbg in links:
+				nodes.add(neg_cbg)
+				edges.append((neg_cbg, cbg))
+				visits.append(links[cbg][neg_cbg])
 		nodes.add(cbg)
 
 	g.add_vertices(list(nodes))
 	g.add_edges(edges)
-	g.es['weight'] = weights
+	g.es['visits'] = visits
 
 	g.write_pickle(join(save_dir, pattern_file.split('\\')[-1].split('.')[0]))
 

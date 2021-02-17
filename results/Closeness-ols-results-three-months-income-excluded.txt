@@ -1,0 +1,28 @@
+                                                   OLS Regression Results                                                   
+============================================================================================================================
+Dep. Variable:     Closeness Relative Change, Jan-Feb-March vs Apr-May-Jun   R-squared (uncentered):                   0.961
+Model:                                                                 OLS   Adj. R-squared (uncentered):              0.961
+Method:                                                      Least Squares   F-statistic:                          3.295e+04
+Date:                                                     Wed, 17 Feb 2021   Prob (F-statistic):                        0.00
+Time:                                                             09:57:25   Log-Likelihood:                         -21733.
+No. Observations:                                                     5364   AIC:                                  4.347e+04
+Df Residuals:                                                         5360   BIC:                                  4.350e+04
+Df Model:                                                                4                                                  
+Covariance Type:                                                 nonrobust                                                  
+================================================================================
+                   coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------
+White Per      -71.6506      0.424   -169.162      0.000     -72.481     -70.820
+Asian Per      -67.6695      0.986    -68.617      0.000     -69.603     -65.736
+Black Per      -64.9595      0.552   -117.754      0.000     -66.041     -63.878
+Hispanic Per   -42.7521      0.643    -66.491      0.000     -44.013     -41.492
+==============================================================================
+Omnibus:                      174.978   Durbin-Watson:                   1.289
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              191.870
+Skew:                           0.452   Prob(JB):                     2.17e-42
+Kurtosis:                       3.207   Cond. No.                         3.26
+==============================================================================
+
+Notes:
+[1] R² is computed without centering (uncentered) since the model does not contain a constant.
+[2] Standard Errors assume that the covariance matrix of the errors is correctly specified.

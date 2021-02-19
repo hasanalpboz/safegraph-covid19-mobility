@@ -28,3 +28,4 @@ pattern-data-path:                           # the actual paths that stores the 
   weekly-v1: "main-file"
   weekly-v2: "patterns"
   weekly-v3: "patterns" 
+# add census params

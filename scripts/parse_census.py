@@ -55,5 +55,3 @@ for key in census_attributes:
 		col_names.append(field)
 
 df[col_names].to_csv(join(pwd, 'util_datasets', 'census_attributes.csv'), index=False)
-
-#shutil.rmtree(join(census_path, 'safegraph_open_census_data'))

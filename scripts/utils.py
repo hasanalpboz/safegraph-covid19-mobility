@@ -6,7 +6,6 @@ import os
 from os.path import join, exists
 import yaml
 
-
 def parse_config():
 	'''
 	parse and return the config file as a regular dict

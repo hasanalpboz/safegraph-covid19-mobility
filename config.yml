@@ -1,31 +1,50 @@
 ---
-name: "SafeGraph Mobility Analysis"
+name: 'SafeGraph Mobility Analysis'
 pwd: 'E:\safegraph-covid19-mobility'         # dataset path
-storage: "data"                              # folder that stores the dataset
+storage: 'data'                              # folder that stores the dataset
 proj-config:                                 # folder names and subdirs
-  weekly-v1: "weekly-patterns-v1"            # weekly mobility until 2020-06-15  
-  weekly-v2: "weekly-patterns-v2"            # weekly mobility from 2020-06-15 to 2020-11-30
-  weekly-v3: "weekly-patterns-v3"            # 2020-11-30 to present
-  weekly-v4: "weekly-patterns-v4"            # backfill for dec 2020 and onward releases
-  # monthly-v1: "monthly-patterns-v1"          # monthly mobility until April 2020
-  # monthly-v2: "monthly-patterns-v2"          # monthly mobility after May 2020
-  core-places: "core-places"                 # POI data
-  open-census: "open-census"                 # open census data
-  # neg-patterns: "neg-patterns"               # neighborhood patterns
-  # soc-dist-metrics: "soc-dist-metrics"       # social distancing metrics
+  weekly-v1: 'weekly-patterns-v1'            # weekly mobility until 2020-06-15  
+  weekly-v2: 'weekly-patterns-v2'            # weekly mobility from 2020-06-15 to 2020-11-30
+  weekly-v3: 'weekly-patterns-v3'            # 2020-11-30 to present
+  weekly-v4: 'weekly-patterns-v4'            # backfill for dec 2020 and onward releases
+  # monthly-v1: 'monthly-patterns-v1'          # monthly mobility until April 2020
+  # monthly-v2: 'monthly-patterns-v2'          # monthly mobility after May 2020
+  core-places: 'core-places'                 # POI data
+  open-census: 'open-census'                 # open census data
+  # neg-patterns: 'neg-patterns'               # neighborhood patterns
+  # soc-dist-metrics: 'soc-dist-metrics'       # social distancing metrics
 aws-commands:                                # commands to download the data
-  monthly-v1: "aws s3 sync s3://sg-c19-response/monthly-patterns/patterns_backfill/2020/05/07/12/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
-  monthly-v2: "aws s3 sync s3://sg-c19-response/monthly-patterns/patterns/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
-  weekly-v1: "aws s3 sync s3://sg-c19-response/weekly-patterns/v2/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
-  weekly-v2: "aws s3 sync s3://sg-c19-response/weekly-patterns-delivery/weekly/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
-  weekly-v3: "aws s3 sync s3://sg-c19-response/weekly-patterns-delivery-2020-12/weekly/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
-  weekly-v4: "aws s3 sync s3://sg-c19-response/weekly-patterns-delivery-2020-12-backfill/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
-  core-places: "aws s3 sync s3://sg-c19-response/core/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
-  open-census: "aws s3 sync s3://sg-c19-response/open-census-data/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
-  neg-patterns: "aws s3 sync s3://sg-c19-response/neighborhood-patterns/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
-  soc-dist-metrics: "aws s3 sync s3://sg-c19-response/social-distancing/v2/ {} --profile safegraphws --endpoint https://s3.wasabisys.com"
-pattern-data-path:                           # the actual paths that stores the pattern files
-  weekly-v1: "main-file"
-  weekly-v2: "patterns"
-  weekly-v3: "patterns" 
-# add census params
+  monthly-v1: 'aws s3 sync s3://sg-c19-response/monthly-patterns/patterns_backfill/2020/05/07/12/ {} --profile safegraphws --endpoint https://s3.wasabisys.com'
+  monthly-v2: 'aws s3 sync s3://sg-c19-response/monthly-patterns/patterns/ {} --profile safegraphws --endpoint https://s3.wasabisys.com'
+  weekly-v1: 'aws s3 sync s3://sg-c19-response/weekly-patterns/v2/ {} --profile safegraphws --endpoint https://s3.wasabisys.com'
+  weekly-v2: 'aws s3 sync s3://sg-c19-response/weekly-patterns-delivery/weekly/ {} --profile safegraphws --endpoint https://s3.wasabisys.com'
+  weekly-v3: 'aws s3 sync s3://sg-c19-response/weekly-patterns-delivery-2020-12/weekly/ {} --profile safegraphws --endpoint https://s3.wasabisys.com'
+  weekly-v4: 'aws s3 sync s3://sg-c19-response/weekly-patterns-delivery-2020-12-backfill/ {} --profile safegraphws --endpoint https://s3.wasabisys.com'
+  core-places: 'aws s3 sync s3://sg-c19-response/core/ {} --profile safegraphws --endpoint https://s3.wasabisys.com'
+  open-census: 'aws s3 sync s3://sg-c19-response/open-census-data/ {} --profile safegraphws --endpoint https://s3.wasabisys.com'
+  neg-patterns: 'aws s3 sync s3://sg-c19-response/neighborhood-patterns/ {} --profile safegraphws --endpoint https://s3.wasabisys.com'
+  soc-dist-metrics: 'aws s3 sync s3://sg-c19-response/social-distancing/v2/ {} --profile safegraphws --endpoint https://s3.wasabisys.com'
+pattern-data-path:                           # the actual paths that store the pattern files
+  weekly-v1: 'main-file'
+  weekly-v2: 'patterns'
+  weekly-v3: 'patterns' 
+census-attributes:
+  finance:
+    subgroups:
+      median_house_income: 'B19013e1'
+      agg_household_income: 'B19025e1'
+      per_capita_income: 'B19301e1'
+  age:
+    subgroups:
+      median_age: 'B01002e1'
+  race:
+    total_population: 'B01001e1'
+    subgroups:
+      white_population: 'B02001e2'
+      black_population: 'B02001e3'
+      asian_population: 'B02001e5'
+      hispanic_population: 'B03003e3'
+  education:
+    total_population: 'B15003e1'   # normalization over the eligible population
+    subgroups:
+      bachelors: 'B15003e22'

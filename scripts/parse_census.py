@@ -6,6 +6,7 @@ import yaml
 from functools import reduce
 import shutil
 from tqdm import tqdm
+import tarfile
 
 config = parse_config()
 pwd = config['pwd']

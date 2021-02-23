@@ -1,29 +1,34 @@
                                                    OLS Regression Results                                                   
 ============================================================================================================================
-Dep. Variable:     Closeness Relative Change, Jan-Feb-March vs Apr-May-Jun   R-squared (uncentered):                   0.963
-Model:                                                                 OLS   Adj. R-squared (uncentered):              0.963
-Method:                                                      Least Squares   F-statistic:                          2.778e+04
-Date:                                                     Wed, 17 Feb 2021   Prob (F-statistic):                        0.00
-Time:                                                             06:54:53   Log-Likelihood:                         -21598.
-No. Observations:                                                     5364   AIC:                                  4.321e+04
-Df Residuals:                                                         5359   BIC:                                  4.324e+04
-Df Model:                                                                5                                                  
+Dep. Variable:     Closeness Relative Change, Jan-Feb-March vs Apr-May-Jun   R-squared (uncentered):                   0.969
+Model:                                                                 OLS   Adj. R-squared (uncentered):              0.969
+Method:                                                      Least Squares   F-statistic:                          2.062e+04
+Date:                                                     Tue, 23 Feb 2021   Prob (F-statistic):                        0.00
+Time:                                                             23:57:35   Log-Likelihood:                         -21150.
+No. Observations:                                                     5364   AIC:                                  4.232e+04
+Df Residuals:                                                         5356   BIC:                                  4.237e+04
+Df Model:                                                                8                                                  
 Covariance Type:                                                 nonrobust                                                  
-================================================================================
-                   coef    std err          t      P>|t|      [0.025      0.975]
---------------------------------------------------------------------------------
-Income         -13.3483      0.800    -16.676      0.000     -14.917     -11.779
-White Per      -61.0879      0.756    -80.787      0.000     -62.570     -59.606
-Asian Per      -61.1037      1.039    -58.803      0.000     -63.141     -59.067
-Black Per      -59.0568      0.644    -91.712      0.000     -60.319     -57.794
-Hispanic Per   -44.4099      0.635    -69.958      0.000     -45.654     -43.165
+=======================================================================================
+                          coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------
+income              -7.599e-05   6.12e-06    -12.425      0.000    -8.8e-05    -6.4e-05
+white_population      -37.1934      1.109    -33.535      0.000     -39.368     -35.019
+black_population      -28.0428      1.278    -21.942      0.000     -30.548     -25.537
+asian_population      -33.5384      1.638    -20.471      0.000     -36.750     -30.327
+racial_diversity        4.4018      0.723      6.092      0.000       2.985       5.818
+hispanic_population   -25.1016      1.158    -21.684      0.000     -27.371     -22.832
+education             -14.1333      1.828     -7.731      0.000     -17.717     -10.550
+mean_time_to_work      -0.7995      0.026    -30.477      0.000      -0.851      -0.748
 ==============================================================================
-Omnibus:                      236.812   Durbin-Watson:                   1.280
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):              279.171
-Skew:                           0.496   Prob(JB):                     2.39e-61
-Kurtosis:                       3.513   Cond. No.                         5.55
+Omnibus:                      151.916   Durbin-Watson:                   1.335
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              175.086
+Skew:                           0.376   Prob(JB):                     9.56e-39
+Kurtosis:                       3.466   Cond. No.                     1.01e+06
 ==============================================================================
 
 Notes:
 [1] R² is computed without centering (uncentered) since the model does not contain a constant.
 [2] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[3] The condition number is large, 1.01e+06. This might indicate that there are
+strong multicollinearity or other numerical problems.

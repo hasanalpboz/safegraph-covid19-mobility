@@ -48,3 +48,14 @@ census-attributes:
     total_population: 'B15003e1'   # normalization over the eligible population
     subgroups:
       bachelors: 'B15003e22'
+  commuting:
+    subgroups:
+      t-60-80: 'B08134m10'
+      t-0-10: 'B08134e2'
+      t-10-14: 'B08134e3'
+      t-15-19: 'B08134e4'
+      t-20-24: 'B08134e5'
+      t-25-29: 'B08134e6'
+      t-30-24: 'B08134e7'
+      t-35-44: 'B08134e8'
+      t-45-59: 'B08134e9'

@@ -5,6 +5,7 @@ import json
 import os
 from os.path import join, exists
 import yaml
+from sklearn.metrics.pairwise import haversine_distances
 
 def parse_config():
 	'''
@@ -96,7 +97,7 @@ def generate_links(visit, links):
 			links[poi_cbg][str_cbg] = visitor_cbgs[cbg]
 
 
-def create_network(pattern_file, save_dir='.'):
+def create_network(pattern_file, cbg_loc_df, save_dir='.'):
 	'''
 	creates a directed CBG-CBG network and saves it to save_dir
 	'''
@@ -109,17 +110,20 @@ def create_network(pattern_file, save_dir='.'):
 	nodes = set()
 	edges = []
 	visits = []
+	distance_in_km = []
 	for cbg in links:
 		for neg_cbg in links[cbg]:
 			if neg_cbg in links:
 				nodes.add(neg_cbg)
 				edges.append((neg_cbg, cbg))
 				visits.append(links[cbg][neg_cbg])
+				distance_in_km.append(cbg_loc_df.loc[neg_cbg, cbg])
 		nodes.add(cbg)
 
 	g.add_vertices(list(nodes))
 	g.add_edges(edges)
 	g.es['visits'] = visits
+	g.es['weight'] = distance_in_km
 
 	g.write_pickle(join(save_dir, pattern_file.split('\\')[-1].split('.')[0]))
 

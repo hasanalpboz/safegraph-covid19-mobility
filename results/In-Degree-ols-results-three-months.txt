@@ -1,0 +1,34 @@
+                                                   OLS Regression Results                                                   
+============================================================================================================================
+Dep. Variable:     In-Degree Relative Change, Jan-Feb-March vs Apr-May-Jun   R-squared (uncentered):                   0.907
+Model:                                                                 OLS   Adj. R-squared (uncentered):              0.907
+Method:                                                      Least Squares   F-statistic:                              6528.
+Date:                                                     Wed, 24 Feb 2021   Prob (F-statistic):                        0.00
+Time:                                                             00:00:19   Log-Likelihood:                         -22384.
+No. Observations:                                                     5364   AIC:                                  4.478e+04
+Df Residuals:                                                         5356   BIC:                                  4.484e+04
+Df Model:                                                                8                                                  
+Covariance Type:                                                 nonrobust                                                  
+=======================================================================================
+                          coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------
+income              -9.339e-05    7.7e-06    -12.133      0.000      -0.000   -7.83e-05
+white_population      -27.7679      1.396    -19.894      0.000     -30.504     -25.032
+black_population      -29.2642      1.608    -18.194      0.000     -32.417     -26.111
+asian_population      -44.6531      2.062    -21.657      0.000     -48.695     -40.611
+racial_diversity       -0.2609      0.909     -0.287      0.774      -2.043       1.522
+hispanic_population   -30.1356      1.457    -20.685      0.000     -32.992     -27.280
+education             -43.1106      2.301    -18.739      0.000     -47.621     -38.600
+mean_time_to_work       0.0203      0.033      0.615      0.538      -0.044       0.085
+==============================================================================
+Omnibus:                     2194.644   Durbin-Watson:                   1.629
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            32912.461
+Skew:                           1.547   Prob(JB):                         0.00
+Kurtosis:                      14.734   Cond. No.                     1.01e+06
+==============================================================================
+
+Notes:
+[1] R² is computed without centering (uncentered) since the model does not contain a constant.
+[2] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[3] The condition number is large, 1.01e+06. This might indicate that there are
+strong multicollinearity or other numerical problems.

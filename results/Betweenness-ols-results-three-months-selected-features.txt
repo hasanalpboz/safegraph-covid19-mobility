@@ -1,0 +1,28 @@
+                                                OLS Regression Results                                               
+=====================================================================================================================
+Dep. Variable:     Betweenness Relative Change, Jan-Feb-March vs Apr-May-Jun   R-squared:                       0.159
+Model:                                                                   OLS   Adj. R-squared:                  0.159
+Method:                                                        Least Squares   F-statistic:                     254.2
+Date:                                                       Wed, 24 Feb 2021   Prob (F-statistic):          3.01e-200
+Time:                                                               14:01:01   Log-Likelihood:                -26943.
+No. Observations:                                                       5364   AIC:                         5.390e+04
+Df Residuals:                                                           5359   BIC:                         5.393e+04
+Df Model:                                                                  4                                         
+Covariance Type:                                                   nonrobust                                         
+=======================================================================================
+                          coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------
+const                  14.7959      2.281      6.487      0.000      10.325      19.267
+black_population        5.9933      2.235      2.682      0.007       1.612      10.375
+asian_population      -17.5106      3.420     -5.120      0.000     -24.215     -10.806
+hispanic_population   -10.0657      2.686     -3.747      0.000     -15.332      -4.800
+education             -66.6878      2.949    -22.617      0.000     -72.468     -60.907
+==============================================================================
+Omnibus:                     1799.322   Durbin-Watson:                   1.798
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             9786.234
+Skew:                           1.507   Prob(JB):                         0.00
+Kurtosis:                       8.891   Cond. No.                         11.2
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

@@ -47,9 +47,9 @@ census-attributes:
   education:
     total_population: 'B15003e1'   # normalization over the eligible population
     subgroups:
-      edu-bachelors: 'B15003e22',
-      edu-masters: 'B15003e23',
-      edu-professional_prog: 'B15003e24',
+      edu-bachelors: 'B15003e22'
+      edu-masters: 'B15003e23'
+      edu-professional_prog: 'B15003e24'
       edu-phd: 'B15003e25'
   commuting:
     subgroups:

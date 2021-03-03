@@ -4,29 +4,27 @@ Dep. Variable:     Eigenvector Relative Change, Jan-Feb-March vs Apr-May-Jun   R
 Model:                                                                   OLS   Adj. R-squared:                  0.209
 Method:                                                        Least Squares   F-statistic:                     236.8
 Date:                                                       Wed, 03 Mar 2021   Prob (F-statistic):          3.18e-269
-Time:                                                               17:23:58   Log-Likelihood:                -35749.
-No. Observations:                                                       5364   AIC:                         7.151e+04
-Df Residuals:                                                           5357   BIC:                         7.156e+04
+Time:                                                               17:23:58   Log-Likelihood:                -6980.2
+No. Observations:                                                       5364   AIC:                         1.397e+04
+Df Residuals:                                                           5357   BIC:                         1.402e+04
 Df Model:                                                                  6                                         
 Covariance Type:                                                   nonrobust                                         
 =======================================================================================
                           coef    std err          t      P>|t|      [0.025      0.975]
 ---------------------------------------------------------------------------------------
-const                 458.0433     21.924     20.893      0.000     415.064     501.022
-income                  0.0002      0.000      1.796      0.073   -1.75e-05       0.000
-black_population     -286.5051     11.941    -23.994      0.000    -309.914    -263.096
-asian_population     -391.6607     17.849    -21.943      0.000    -426.653    -356.669
-hispanic_population  -447.0021     14.184    -31.514      0.000    -474.809    -419.195
-education            -518.3576     18.528    -27.977      0.000    -554.680    -482.036
-mean_time_to_work       2.2851      0.481      4.754      0.000       1.343       3.227
+const                 4.16e-16      0.012   3.42e-14      1.000      -0.024       0.024
+income                  0.0330      0.018      1.796      0.073      -0.003       0.069
+black_population       -0.3994      0.017    -23.994      0.000      -0.432      -0.367
+asian_population       -0.3202      0.015    -21.943      0.000      -0.349      -0.292
+hispanic_population    -0.5207      0.017    -31.514      0.000      -0.553      -0.488
+education              -0.5753      0.021    -27.977      0.000      -0.616      -0.535
+mean_time_to_work       0.0660      0.014      4.754      0.000       0.039       0.093
 ==============================================================================
 Omnibus:                     4106.979   Durbin-Watson:                   0.827
 Prob(Omnibus):                  0.000   Jarque-Bera (JB):           123688.020
 Skew:                           3.395   Prob(JB):                         0.00
-Kurtosis:                      25.524   Cond. No.                     7.74e+05
+Kurtosis:                      25.524   Cond. No.                         3.46
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-[2] The condition number is large, 7.74e+05. This might indicate that there are
-strong multicollinearity or other numerical problems.

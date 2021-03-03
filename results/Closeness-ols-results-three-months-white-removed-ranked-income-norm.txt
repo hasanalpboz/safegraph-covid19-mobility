@@ -4,26 +4,26 @@ Dep. Variable:     Closeness Relative Change, Jan-Feb-March vs Apr-May-Jun   R-s
 Model:                                                                 OLS   Adj. R-squared:                  0.109
 Method:                                                      Least Squares   F-statistic:                     110.9
 Date:                                                     Wed, 03 Mar 2021   Prob (F-statistic):          3.06e-132
-Time:                                                             17:30:40   Log-Likelihood:                -20645.
-No. Observations:                                                     5364   AIC:                         4.130e+04
-Df Residuals:                                                         5357   BIC:                         4.135e+04
+Time:                                                             17:30:40   Log-Likelihood:                -7297.3
+No. Observations:                                                     5364   AIC:                         1.461e+04
+Df Residuals:                                                         5357   BIC:                         1.465e+04
 Df Model:                                                                6                                         
 Covariance Type:                                                 nonrobust                                         
 =======================================================================================
                           coef    std err          t      P>|t|      [0.025      0.975]
 ---------------------------------------------------------------------------------------
-const                 -61.8224      1.304    -47.417      0.000     -64.378     -59.266
-income                 -4.2341      0.796     -5.316      0.000      -5.795      -2.673
-black_population       11.2932      0.718     15.731      0.000       9.886      12.701
-asian_population       11.0069      1.067     10.313      0.000       8.915      13.099
-hispanic_population     4.6819      0.867      5.397      0.000       2.981       6.382
-education              -3.6605      1.067     -3.431      0.001      -5.752      -1.569
-mean_time_to_work      -0.2541      0.029     -8.870      0.000      -0.310      -0.198
+const               -6.555e-16      0.013  -5.09e-14      1.000      -0.025       0.025
+income                 -0.1012      0.019     -5.316      0.000      -0.138      -0.064
+black_population        0.2790      0.018     15.731      0.000       0.244       0.314
+asian_population        0.1595      0.015     10.313      0.000       0.129       0.190
+hispanic_population     0.0967      0.018      5.397      0.000       0.062       0.132
+education              -0.0720      0.021     -3.431      0.001      -0.113      -0.031
+mean_time_to_work      -0.1301      0.015     -8.870      0.000      -0.159      -0.101
 ==============================================================================
 Omnibus:                      477.939   Durbin-Watson:                   1.383
 Prob(Omnibus):                  0.000   Jarque-Bera (JB):              679.132
 Skew:                           0.713   Prob(JB):                    3.38e-148
-Kurtosis:                       4.002   Cond. No.                         394.
+Kurtosis:                       4.002   Cond. No.                         3.35
 ==============================================================================
 
 Notes:

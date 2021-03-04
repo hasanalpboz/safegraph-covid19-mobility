@@ -1,0 +1,30 @@
+                                               OLS Regression Results                                               
+====================================================================================================================
+Dep. Variable:     Out-Degree Relative Change, Jan-Feb-March vs Apr-May-Jun   R-squared:                       0.388
+Model:                                                                  OLS   Adj. R-squared:                  0.387
+Method:                                                       Least Squares   F-statistic:                     565.7
+Date:                                                      Thu, 04 Mar 2021   Prob (F-statistic):               0.00
+Time:                                                              19:41:13   Log-Likelihood:                -19362.
+No. Observations:                                                      5364   AIC:                         3.874e+04
+Df Residuals:                                                          5357   BIC:                         3.878e+04
+Df Model:                                                                 6                                         
+Covariance Type:                                                  nonrobust                                         
+=======================================================================================
+                          coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------
+const                 -54.1896      1.026    -52.796      0.000     -56.202     -52.178
+income                 -1.3192      0.627     -2.104      0.035      -2.548      -0.090
+black_population        0.9850      0.565      1.743      0.081      -0.123       2.093
+asian_population       -6.2950      0.840     -7.492      0.000      -7.942      -4.648
+hispanic_population    -6.4010      0.683     -9.373      0.000      -7.740      -5.062
+education             -28.3753      0.840    -33.784      0.000     -30.022     -26.729
+mean_time_to_work       0.1799      0.023      7.975      0.000       0.136       0.224
+==============================================================================
+Omnibus:                      525.769   Durbin-Watson:                   1.832
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1273.122
+Skew:                           0.582   Prob(JB):                    3.51e-277
+Kurtosis:                       5.084   Cond. No.                         394.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

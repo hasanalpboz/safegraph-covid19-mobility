@@ -3,8 +3,8 @@
 Dep. Variable:     Out-Degree Relative Change, Jan-Feb-March vs Apr-May-Jun   R-squared:                       0.388
 Model:                                                                  OLS   Adj. R-squared:                  0.387
 Method:                                                       Least Squares   F-statistic:                     565.7
-Date:                                                      Thu, 04 Mar 2021   Prob (F-statistic):               0.00
-Time:                                                              19:41:13   Log-Likelihood:                -6294.9
+Date:                                                      Wed, 10 Mar 2021   Prob (F-statistic):               0.00
+Time:                                                              16:59:28   Log-Likelihood:                -6294.9
 No. Observations:                                                      5364   AIC:                         1.260e+04
 Df Residuals:                                                          5357   BIC:                         1.265e+04
 Df Model:                                                                 6                                         

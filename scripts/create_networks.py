@@ -18,7 +18,7 @@ NET_PATTERN_DIR = join(pwd, dpath, 'Nets')
 if not exists(NET_PATTERN_DIR):
 	os.mkdir(NET_PATTERN_DIR)
 
-NETWORK_SAVE_DIR = join(NET_PATTERN_DIR, f'{AREA_NAME}-CBG-CBG-Nets')
+NETWORK_SAVE_DIR = join(NET_PATTERN_DIR, f'{AREA_NAME}-CBG-CBG-Nets-Staten_Island_Removed')
 if not exists(NETWORK_SAVE_DIR):
 	os.mkdir(NETWORK_SAVE_DIR)
 
@@ -35,6 +35,7 @@ loc_df['longitude'] = loc_df['longitude'].apply(radians)
 loc_df = pd.DataFrame(haversine_distances(loc_df[['latitude', 'longitude']].values) * 6371000/1000, columns=loc_df.index, index=loc_df.index)
 
 # staten island cbgs
+si_cbgs = set(pd.read_csv(join(pwd, 'util_datasets', 'staten_island_cbgs.csv'))['cbgs'].astype('str').values)
 
-for pattern_file in tqdm(pattern_files):
-	create_network(pattern_file, loc_df, save_dir=NETWORK_SAVE_DIR)
+for pattern_file in tqdm(pattern_files[34:]):
+	create_network(pattern_file, loc_df, si_cbgs, save_dir=NETWORK_SAVE_DIR)

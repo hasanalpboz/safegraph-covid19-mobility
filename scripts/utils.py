@@ -79,31 +79,33 @@ def filter_patterns(pattern_file, cbgs, save_dir='.'):
 			index=False, 
 			header=header)
 
-def generate_links(visit, links):
+def generate_links(visit, links, exclude_cbgs):
 	'''
 	creates a dict of origin - target dict extracted from each row
 	'''
 	poi_cbg = str(int(visit["poi_cbg"]))
-	visitor_cbgs = json.loads(visit["visitor_home_cbgs"])
-	for cbg in visitor_cbgs.keys():
-		str_cbg = str(cbg)
-		if poi_cbg in links:
-			if str_cbg in links[poi_cbg]:
-				links[poi_cbg][str_cbg] += visitor_cbgs[cbg]
-			else:
-				links[poi_cbg][str_cbg] = visitor_cbgs[cbg]
-		else:
-			links[poi_cbg] = {}
-			links[poi_cbg][str_cbg] = visitor_cbgs[cbg]
+	if poi_cbg not in exclude_cbgs:
+		visitor_cbgs = json.loads(visit["visitor_home_cbgs"])
+		for cbg in visitor_cbgs.keys():
+			str_cbg = str(cbg)
+			if str_cbg not in exclude_cbgs:
+				if poi_cbg in links:
+					if str_cbg in links[poi_cbg]:
+						links[poi_cbg][str_cbg] += visitor_cbgs[cbg]
+					else:
+						links[poi_cbg][str_cbg] = visitor_cbgs[cbg]
+				else:
+					links[poi_cbg] = {}
+					links[poi_cbg][str_cbg] = visitor_cbgs[cbg]
 
 
-def create_network(pattern_file, cbg_loc_df, save_dir='.'):
+def create_network(pattern_file, cbg_loc_df, exclude_cbgs, save_dir='.'):
 	'''
 	creates a directed CBG-CBG network and saves it to save_dir
 	'''
 	df = pd.read_csv(pattern_file)
 	links = {}
-	df.apply(generate_links, axis=1, links=links)
+	df[~df['poi_cbg'].astype(int).astype(str).isin(exclude_cbgs)].apply(generate_links, axis=1, links=links, exclude_cbgs=exclude_cbgs)
 
 	g = ig.Graph(directed=True)
 

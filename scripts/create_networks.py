@@ -34,5 +34,7 @@ loc_df['longitude'] = loc_df['longitude'].apply(radians)
 
 loc_df = pd.DataFrame(haversine_distances(loc_df[['latitude', 'longitude']].values) * 6371000/1000, columns=loc_df.index, index=loc_df.index)
 
+# staten island cbgs
+
 for pattern_file in tqdm(pattern_files):
 	create_network(pattern_file, loc_df, save_dir=NETWORK_SAVE_DIR)

@@ -61,7 +61,7 @@ def filter_patterns(pattern_file, cbgs, save_dir='.'):
 	'''
 	reads the pattern file, filters them wrt CBGs and saves them to save_dir 
 	'''
-	col_names = ['poi_cbg', 'visitor_home_cbgs']
+	col_names = ['safegraph_place_id', 'poi_cbg', 'visitor_home_cbgs']
 	dfs = pd.read_csv(pattern_file, 
 		compression='gzip', 
 		chunksize=10**6,
@@ -70,7 +70,7 @@ def filter_patterns(pattern_file, cbgs, save_dir='.'):
 	date_range = get_pattern_date_range(pattern_file)
 	fname = join(save_dir, f"{date_range}.csv")
 	header = True
-
+	print('nane')
 	for df in dfs:
 		if exists(fname):
 			header = False

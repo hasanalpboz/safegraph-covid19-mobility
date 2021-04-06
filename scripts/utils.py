@@ -70,7 +70,7 @@ def filter_patterns(pattern_file, cbgs, save_dir='.'):
 	date_range = get_pattern_date_range(pattern_file)
 	fname = join(save_dir, f"{date_range}.csv")
 	header = True
-	print('nane')
+
 	for df in dfs:
 		if exists(fname):
 			header = False

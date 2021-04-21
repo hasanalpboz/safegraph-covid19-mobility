@@ -14,7 +14,7 @@ if not exists(PATTERN_DIR):
 	os.mkdir(PATTERN_DIR)
 
 AREA_NAME = 'NYC'
-FILTERED_PATTERN_SAVE_DIR = join(PATTERN_DIR, f'{AREA_NAME}-patterns')
+FILTERED_PATTERN_SAVE_DIR = join(PATTERN_DIR, f'{AREA_NAME}-patterns-V2')
 AREA_CBG_FILE = join('..', 'util_datasets', AREA_NAME, f'{AREA_NAME}-cbgs.json')
 
 if not exists(FILTERED_PATTERN_SAVE_DIR):

@@ -61,7 +61,7 @@ def filter_patterns(pattern_file, cbgs, save_dir='.'):
 	'''
 	reads the pattern file, filters them wrt CBGs and saves them to save_dir 
 	'''
-	col_names = ['safegraph_place_id', 'poi_cbg', 'visitor_home_cbgs']
+	col_names = ['safegraph_place_id', 'poi_cbg', 'visitor_home_cbgs', 'raw_visit_counts', 'distance_from_home', 'median_dwell']
 	dfs = pd.read_csv(pattern_file, 
 		compression='gzip', 
 		chunksize=10**6,

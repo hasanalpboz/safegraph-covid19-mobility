@@ -1,0 +1,25 @@
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     Hotspot Occurrences   R-squared:                       0.108
+Model:                             OLS   Adj. R-squared:                  0.108
+Method:                  Least Squares   F-statistic:                     731.5
+Date:                 Sat, 13 Nov 2021   Prob (F-statistic):          3.39e-152
+Time:                         18:39:40   Log-Likelihood:                -43380.
+No. Observations:                 6065   AIC:                         8.676e+04
+Df Residuals:                     6063   BIC:                         8.678e+04
+Df Model:                            1                                         
+Covariance Type:             nonrobust                                         
+=============================================================================================
+                                coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------
+const                       644.4445      9.760     66.026      0.000     625.310     663.579
+asian_population-quartile   -96.2745      3.560    -27.046      0.000    -103.253     -89.296
+==============================================================================
+Omnibus:                     1831.447   Durbin-Watson:                   0.119
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             7042.945
+Skew:                           1.462   Prob(JB):                         0.00
+Kurtosis:                       7.396   Cond. No.                         7.51
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

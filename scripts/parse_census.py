@@ -44,7 +44,7 @@ for col_name, code in tqdm(codes.items()):
 
 df = reduce(lambda x,y: x.merge(y, on='census_block_group', how='inner'), dfs)
 
-col_names = ['census_block_group']
+col_names = ['census_block_group', 'total_population']
 for key in census_attributes:
 	normalizer = None
 	if 'total_population' in census_attributes[key]:
@@ -55,4 +55,5 @@ for key in census_attributes:
 			df[field] /= df[normalizer]
 		col_names.append(field)
 
+df = df.rename(columns={census_attributes['race']['total_population']: 'total_population'})
 df[col_names].to_csv(join(pwd, 'util_datasets', 'census_attributes.csv'), index=False)

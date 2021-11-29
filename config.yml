@@ -2,6 +2,21 @@
 name: 'SafeGraph Mobility Analysis'
 pwd: 'E:\safegraph-covid19-mobility'         # dataset path
 storage: 'data'                              # folder that stores the dataset
+util_datasets: 'util_datasets'
+datasets:
+  nyc-msa: 'NY-NJ-PA-msa.csv'
+  nyc-shapefile: 'NYC-cbgs.json'
+  sg-sub-categories: 'sub_categories.csv'
+  node-dissimilarity: 'node-dissimilarities.csv'
+  google-mobility-2020: 'google-mobility-report-2020.csv'
+  google-mobility-2021: 'google-mobility-report-2021.csv'
+  census-data: 'census_attributes.csv'
+  nyc-mobility-by-borough: 'mobility-by-boroughs.csv'
+colors:
+  top_color: '#1b9e77'
+  second_color: '#d95f02'
+  third_color: '#e7298a'
+  bottom_color: '#7570b3'
 proj-config:                                 # folder names and subdirs
   weekly-v1: 'weekly-patterns-v1'            # weekly mobility until 2020-06-15  
   weekly-v2: 'weekly-patterns-v2'            # weekly mobility from 2020-06-15 to 2020-11-30

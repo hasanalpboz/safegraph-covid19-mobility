@@ -14,8 +14,7 @@ def execute_command(command):
         args = command
     else:
         args = shlex.split(command)
-
-    # create the subprocess
+        
     process = subprocess.Popen(args)
 
     try:

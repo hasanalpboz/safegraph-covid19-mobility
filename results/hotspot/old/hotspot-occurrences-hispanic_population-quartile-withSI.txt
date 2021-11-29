@@ -1,0 +1,25 @@
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     Hotspot Occurrences   R-squared:                       0.112
+Model:                             OLS   Adj. R-squared:                  0.112
+Method:                  Least Squares   F-statistic:                     765.0
+Date:                 Sat, 13 Nov 2021   Prob (F-statistic):          1.09e-158
+Time:                         18:39:40   Log-Likelihood:                -43365.
+No. Observations:                 6065   AIC:                         8.673e+04
+Df Residuals:                     6063   BIC:                         8.675e+04
+Df Model:                            1                                         
+Covariance Type:             nonrobust                                         
+================================================================================================
+                                   coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------------
+const                          158.7180      9.688     16.383      0.000     139.726     177.710
+hispanic_population-quartile    97.9937      3.543     27.659      0.000      91.048     104.939
+==============================================================================
+Omnibus:                     1437.392   Durbin-Watson:                   0.111
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             4782.347
+Skew:                           1.183   Prob(JB):                         0.00
+Kurtosis:                       6.650   Cond. No.                         7.45
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

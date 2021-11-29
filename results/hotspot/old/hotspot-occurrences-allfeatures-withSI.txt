@@ -1,0 +1,32 @@
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     Hotspot Occurrences   R-squared:                       0.277
+Model:                             OLS   Adj. R-squared:                  0.276
+Method:                  Least Squares   F-statistic:                     273.7
+Date:                 Sat, 13 Nov 2021   Prob (F-statistic):               0.00
+Time:                         18:39:40   Log-Likelihood:                -40125.
+No. Observations:                 5710   AIC:                         8.027e+04
+Df Residuals:                     5701   BIC:                         8.033e+04
+Df Model:                            8                                         
+Covariance Type:             nonrobust                                         
+================================================================================================
+                                   coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------------
+const                          269.3314     37.217      7.237      0.000     196.372     342.291
+income-quartile                -40.9347      4.435     -9.230      0.000     -49.629     -32.241
+white_population-quartile      -19.9166      5.442     -3.660      0.000     -30.585      -9.248
+black_population-quartile       -9.4173      5.090     -1.850      0.064     -19.396       0.562
+asian_population-quartile      -83.2111      3.800    -21.899      0.000     -90.660     -75.762
+hispanic_population-quartile    63.8003      3.794     16.814      0.000      56.362      71.239
+education-quartile              12.4891      4.894      2.552      0.011       2.895      22.083
+mean_time_to_work-quartile       7.4081      3.638      2.036      0.042       0.276      14.540
+election                       323.2816     17.409     18.569      0.000     289.153     357.410
+==============================================================================
+Omnibus:                     1199.519   Durbin-Watson:                   0.211
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             3284.152
+Skew:                           1.116   Prob(JB):                         0.00
+Kurtosis:                       5.971   Cond. No.                         72.7
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

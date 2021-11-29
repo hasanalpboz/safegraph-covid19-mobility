@@ -1,0 +1,33 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               mobility   R-squared:                       0.152
+Model:                            OLS   Adj. R-squared:                  0.151
+Method:                 Least Squares   F-statistic:                     296.8
+Date:                Wed, 24 Nov 2021   Prob (F-statistic):               0.00
+Time:                        15:52:09   Log-Likelihood:                -48278.
+No. Observations:               11626   AIC:                         9.657e+04
+Df Residuals:                   11618   BIC:                         9.663e+04
+Df Model:                           7                                         
+Covariance Type:            nonrobust                                         
+=======================================================================================
+                          coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------
+const                 -33.1878      1.841    -18.031      0.000     -36.796     -29.580
+income               9.448e-06   5.13e-06      1.841      0.066   -6.11e-07    1.95e-05
+white_population        8.4210      1.505      5.596      0.000       5.471      11.371
+black_population        3.1499      1.682      1.873      0.061      -0.146       6.446
+asian_population       -6.6949      1.854     -3.612      0.000     -10.328      -3.062
+hispanic_population    -4.4716      1.117     -4.004      0.000      -6.661      -2.282
+education             -31.7493      1.016    -31.259      0.000     -33.740     -29.758
+mean_time_to_work      -0.2888      0.023    -12.304      0.000      -0.335      -0.243
+==============================================================================
+Omnibus:                    10808.884   Durbin-Watson:                   1.653
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):          2376918.705
+Skew:                           3.863   Prob(JB):                         0.00
+Kurtosis:                      72.621   Cond. No.                     2.10e+06
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.1e+06. This might indicate that there are
+strong multicollinearity or other numerical problems.

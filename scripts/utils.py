@@ -34,12 +34,20 @@ import statsmodels.formula.api as smf
 import warnings
 warnings.filterwarnings('ignore')
 
-nyc_borough_fips_codes = {
+nyc_fips2borough = {
     36085: 'Staten Island',
     36061: 'Manhattan',
     36005: 'Bronx',
     36081: 'Queens',
     36047: 'Brooklyn'
+}
+
+nyc_borough2fips = {
+    'Staten Island': 36085,
+    'Manhattan': 36061,
+    'Bronx': 36005,
+    'Queens': 36081,
+    'Brooklyn': 36047
 }
 
 def parse_config():

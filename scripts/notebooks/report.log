@@ -7,3 +7,11 @@
 2022-09-16 03:09:46,892 - matplotlib.legend - WARNING - No handles with labels found to put in legend.
 2022-09-16 03:19:59,603 - numexpr.utils - INFO - Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
 2022-09-16 03:19:59,606 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2022-09-16 17:19:11,089 - numexpr.utils - INFO - Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2022-09-16 17:19:11,108 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2022-09-17 01:10:10,368 - numexpr.utils - INFO - Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2022-09-17 01:10:10,373 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2022-09-19 20:54:53,159 - numexpr.utils - INFO - Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2022-09-19 20:54:53,175 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2022-09-19 23:44:31,101 - numexpr.utils - INFO - Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2022-09-19 23:44:31,104 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.

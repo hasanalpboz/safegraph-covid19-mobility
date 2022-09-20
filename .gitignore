@@ -1,4 +1,7 @@
 data/*
 scripts/**/.ipynb_checkpoints/*
 scripts/__pycache__/*
-util_datasets/ny-msa-device-counts.csv
+util_datasets/*
+.ipynb_checkpoints/*
+figures/*
+results/*

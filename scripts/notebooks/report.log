@@ -24,3 +24,7 @@
 2022-09-22 18:20:29,008 - matplotlib.ticker - WARNING - Locator attempting to generate 2143482 ticks ([-9.999975367182929, ..., 209.99992199453325]), which exceeds Locator.MAXTICKS (1000).
 2022-09-23 19:40:08,686 - numexpr.utils - INFO - Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
 2022-09-23 19:40:08,707 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2022-09-29 22:27:49,301 - numexpr.utils - INFO - Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2022-09-29 22:27:49,315 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2022-09-29 22:31:44,787 - numexpr.utils - INFO - Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2022-09-29 22:31:44,792 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.

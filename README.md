@@ -1,7 +1,5 @@
 # COVID - Mobility Analysis
 
-This repository contains the code to generate results in our paper titled "One City, Two Tales: Using Mobility Networks to Understand NYC Neighborhood Resilience and Fragility during the COVID-19 Pandemic".
-
 ## Data
 
 - Census Block Group (CBG) level weekly mobility data from [Safegraph](https://docs.safegraph.com/docs/weekly-patterns)

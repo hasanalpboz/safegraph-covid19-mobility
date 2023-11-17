@@ -1,5 +1,4 @@
-
-from os.path import join, exists
+from os.path import join, exists, basename, splitext
 from collections import Counter
 import geopandas as gpd
 from scipy.spatial import distance
@@ -170,7 +169,8 @@ def create_network(pattern_file, exclude_cbgs, save_dir='.'):
 	g.es['visits'] = visits
 	#g.es['weight'] = distance_in_km
 
-	g.write_pickle(join(save_dir, pattern_file.split('\\')[-1].split('.')[0]))
+	fname = join(save_dir, pattern_file.split('/')[-1].split('.')[0])
+	g.write_pickle(fname)
 
 
 def bootstrap_ci(values, stat=np.mean, ci_level=95, repetition=10**3):

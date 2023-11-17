@@ -38,7 +38,7 @@ if not exists(NETWORK_SAVE_DIR):
 # si_cbgs = set(pd.read_csv(join(pwd, 'util_datasets', 'staten_island_cbgs.csv'))['cbgs'].astype(str).values)
 
 # get ny-nj-pa msa counties
-msa_counties = set(pd.read_csv(join(pwd, 'util_datasets', AREA_NAME, 'NY–NJ–PA-msa.csv'))['fips'].astype(str))
+msa_counties = set(pd.read_csv(join(pwd, 'util_datasets', AREA_NAME, 'NY-NJ-PA-msa.csv'))['fips'].astype(str))
 
 for pattern_file in tqdm(pattern_files):
 	#create_network(pattern_file, loc_df, set(), save_dir=NETWORK_SAVE_DIR)
